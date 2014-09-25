@@ -1,0 +1,21 @@
+/* Styles go here */
+
+
+._layout_top{
+    background : #aaa;
+    padding: 10px;
+}
+._layout_left{
+    background : #bbb;
+    padding: 10px;
+}
+
+._layout_right{
+    background : #ccc;
+    padding: 10px;
+}
+
+._layout_bottom{
+    background : #ddd;
+    padding: 10px;
+}

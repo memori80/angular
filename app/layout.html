@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="ko" ng-app="x">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width">
+
+	<title>UI.Layout : holy grail demo</title>
+
+	<link rel="stylesheet" href="lib/ui-layout/ui-layout.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+	<!-- Le javascript -->
+	<script type="application/javascript" src="lib/angular-1.2.9/angular.js"></script>
+	<script type="application/javascript" src="lib/ui-layout//ui-layout.js"></script>
+</head>
+
+<body>
+
+	<div ui-layout>
+	<div class="_layout_top" min-size="10%" max-size="10%">menu</div>
+
+	<div ui-layout="{flow : 'column'}">
+		<div class="_layout_left" size="50%" min-size="30%" max-size="70%">preview</div>
+		<div class="_layout_right">editor</div>
+	</div>
+
+	<div class="_layout_bottom"  size="30%" min-size="30%" max-size="50%">bottom</div>
+</div>
+
+<script>
+	angular.module('x', ['ui.layout']);
+</script>
+</body>
+
+</html>

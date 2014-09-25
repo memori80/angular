@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://layout.jquery-dev.net/lib/css/layout-default-latest.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="http://layout.jquery-dev.net/lib/js/jquery.layout-latest.js"></script>
+</head>
+
+<body  ng-app="myApp" layout state="bodyState" ng-init="bodyState = true">
+<div class="ui-layout-north">
+	angular-1.0.0rc4.js <button ng-click="bodyState=!bodyState">Toggle bodyState</button> {{bodyState}}
+</div>
+<div class="ui-layout-west">
+	West
+</div>
+<div class="ui-layout-center">
+	Center
+</div>
+<div class="ui-layout-east">
+	East
+</div>
+<div class="ui-layout-south" ng-show="bodyState">
+	South
+	<tabs>
+		<pane title="Localization">
+			p1
+		</pane>
+		<pane title="Pluralization">
+			p2
+		</pane>
+	</tabs>
+</div>
+</body>
+
+</html>>
