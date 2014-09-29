@@ -1,38 +1,137 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="http://layout.jquery-dev.net/lib/css/layout-default-latest.css">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-	<script src="http://layout.jquery-dev.net/lib/js/jquery.layout-latest.js"></script>
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://knit.naver.com/examples/ex_ncr.html# -->
+<html lang="ko"><head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>스포츠편집관리툴</title>
+
+	<link rel="stylesheet" href="lib/ui-layout/ui-layout.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="lib/knit-1.1.1/css/knit.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="lib/knit-1.1.1/js/html5shiv.js"></script>
+	<script src="lib/knit-1.1.1/js/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Le javascript -->
+	<script src="lib/angular-1.2.9/angular.js"></script>
+	<script src="lib/ui-layout//ui-layout.js"></script>
+	<script src="lib/jquery-2.1.1/jquery-2.1.1.js"></script>
+
+	<!-- my angularjs -->
+	<script src="js/app.js"></script>
+
 </head>
 
-<body  ng-app="myApp" layout state="bodyState" ng-init="bodyState = true">
-<div class="ui-layout-north">
-	angular-1.0.0rc4.js <button ng-click="bodyState=!bodyState">Toggle bodyState</button> {{bodyState}}
-</div>
-<div class="ui-layout-west">
-	West
-</div>
-<div class="ui-layout-center">
-	Center
-</div>
-<div class="ui-layout-east">
-	East
-</div>
-<div class="ui-layout-south" ng-show="bodyState">
-	South
-	<tabs>
-		<pane title="Localization">
-			p1
-		</pane>
-		<pane title="Pluralization">
-			p2
-		</pane>
-	</tabs>
-</div>
-</body>
+<body class="non-responsive" style="min-width: 960px;">
+<header>
+	<div class="well well-sm pull-right mg-lg mg-top-sm">
+		<ul class="nav nav-bar mg-reset">
+			<li><a href="./admin_files/admin.html"><strong>스포츠관리툴</strong></a></li>
+			<li><a href="./admin_files/admin.html"><strong>동영상관리툴</strong></a></li>
+			<li><a href="./admin_files/admin.html"><strong>로그분석툴</strong></a></li>
+			<li><a href="./admin_files/admin.html"><strong>서비스담당자안내</strong></a></li>
+			<li><a href="./admin_files/admin.html">매뉴얼</a></li>
+			<li><a href="./admin_files/admin.html"><span class="glyphicon glyphicon-bullhorn"></span> 장애신고</a></li>
+		</ul>
+	</div>
+	<div class="brand">
+		<h1>스포츠편집관리시스템 <small>NAVER Corp.</small></h1>
+	</div>
+	<div class="clearfix"></div>
+	<nav class="navbar navbar-default navbar-collapse mg-reset" role="navigation">
+		<ul class="nav nav-pills">
+			<li class="active"><a href="./admin_files/admin.html">편집 관리</a></li>
+			<li><a href="./admin_files/admin.html">사용자 관리</a></li>
+			<li><a href="./admin_files/admin.html">편집로그관리</a></li>
+			<li><a href="./admin_files/admin.html">휴지통</a></li>
+		</ul>
+	</nav>
+	<nav class="navbar navbar-inverse navbar-collapse" role="navigation">
+		<div class="row">
+			<div class="btn-toolbar navbar-btn col-xs-5">
+				<div class="btn-group">
+					<a href="./admin_files/admin.html" class="btn btn-default"><span class="glyphicon glyphicon-star"></span>즐겨찾기</a>
+				</div>
 
-</html>>
+				<div class="btn-group mg-left-lg">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						모바일 &nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="./admin_files/admin.html">PC</a></li>
+						<li><a href="./admin_files/admin.html">공통영역</a></li>
+					</ul>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						야구 &nbsp;&nbsp;&nbsp;&nbsp; <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="./admin_files/admin.html">해외야구</a></li>
+						<li><a href="./admin_files/admin.html">축구</a></li>
+						<li><a href="./admin_files/admin.html">해외축구</a></li>
+					</ul>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						홈 &nbsp;&nbsp;&nbsp;&nbsp; <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="./admin_files/admin.html">뉴스</a></li>
+						<li><a href="./admin_files/admin.html">포토</a></li>
+						<li><a href="./admin_files/admin.html">일정</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-7 text-right">
+				<div class="form-inline navbar-btn">
+					<span class="glyphicon glyphicon-user"></span> 스포츠실
+					<strong>성하경 님&nbsp;&nbsp;</strong>
+					<a href="./admin_files/admin.html" class="btn btn-default"><span class="glyphicon glyphicon-lock"></span> 개인정보</a>
+					<a href="./admin_files/admin.html" class="btn btn-default"><span class="glyphicon glyphicon-log-out"></span>로그아웃</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+<header>
+		<div class="container-full row">
+			<div class="col-xs-10">
+				<div class="row">
+					<div class="">
+						<div class="well" style="height:600px;"><strong>미리보기 영역</strong></div>
+					</div>
+					<div class="col-md-6">
+						<div class="well" style="height:600px;"><strong>편집 영역</strong></div>
+					</div>
+				</div>
+				<ul class="nav nav-tabs hidden-xs">
+					<li class="active"><a href="#tab1" data-toggle="tab">기사리스트</a></li>
+					<li><a href="#tab2" data-toggle="tab">영상리스트</a></li>
+					<li><a href="#tab3" data-toggle="tab">경기일정</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="tab1" >
+						<div class="jumbotron"><h1>기사리스트</h1></div>
+					</div>
+					<div class="tab-pane" id="tab2">
+						<div class="jumbotron"><h1>영상리스트</h1></div>
+					</div>
+					<div class="tab-pane" id="tab3">
+						<div class="jumbotron"><h1>경기일정</h1></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+			});
+		</script>
+
+	</header></header>
+<div id="footer">
+</div>
+</body></html>
+
